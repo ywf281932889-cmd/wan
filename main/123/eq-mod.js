@@ -1,6 +1,6 @@
 /*
 [rewrite_remote]
-^https:\/\/app\.fmcc\.com\.cn\/bass-equity-client-midautumn\/midautumn\/get\/receiveList\?math=.* url script-response-body eq-mod.js
+^https:\/\/app\.fmcc\.com\.cn\/bass-equity-client-midautumn\/midautumn\/get\/receiveList\?math=.* url script-response-body https://github.com/ywf281932889-cmd/wan/edit/main/main/123/eq-mod.js
 
 [mitm]
 hostname = app.fmcc.com.cn
