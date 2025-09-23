@@ -29,12 +29,12 @@ hostname = app.fmcc.com.cn
         createTime : "2025-09-23 00:05:32",
         remark: "脚本已更新"
       },
-      "509069496554531566": {
-        saleName: "自定义 · XXXXXXX",
-        createTime : "2025-09-23 00:02:45",
-        squareImageUrl: "https://your.cdn.com/images/new88.png",
-        bonus: "10",
-        remark: "脚本已更新"
+      //"509069496554531566": {
+      //  saleName: "自定义 · XXXXXXX",
+      //  createTime : "2025-09-23 00:02:45",
+      //  squareImageUrl: "https://your.cdn.com/images/new88.png",
+       // bonus: "10",
+      //  remark: "脚本已更新"
       }
       // 如需修改更多 goodsId，可在此继续添加
     };
