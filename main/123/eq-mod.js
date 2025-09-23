@@ -38,7 +38,7 @@ hostname = app.fmcc.com.cn
       4: {
         saleName: '小爱音箱pro',
         updateTime: '2025-09-23 00:00:30',
-        createTime: '2025-09-23 00:00:47',
+        createTime: '2025-09-23 00:00:30',
         remark: '只修改第4项'
       }
       // 依此类推，想改第4条就加 3: {…}，第5条就加 4: {…}
