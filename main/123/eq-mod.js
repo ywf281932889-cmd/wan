@@ -19,26 +19,30 @@ hostname = app.fmcc.com.cn
   }
 
   if (data.code === '0000' && data.data && Array.isArray(data.data.items)) {
-    // 只要修改第1项（idx=0）和第3项（idx=2），其余保持原样
-    const modifications = {
-      0: {
+    // 按 goodsId 映射，只修改第一名和第三名（对应 JSON 中第 1 与第 3 条记录）
+    const updates = {
+      // 第 1 条记录 goodsId = 466685850835107706
+      '466685850835107706': {
         saleName: '小爱音箱Pro',
         squareImageUrl: 'https://your.cdn.com/images/seq1.png',
         bonus: '5',
         updateTime: '2025-09-23 00:01:03',
+        createTime: '2025-09-23 00:01:03',
         remark: '只修改第1项'
       },
-      2: {
+      // 第 3 条记录 goodsId = 525897912834747003
+      '525897912834747003': {
         saleName: '小爱音箱Pro',
         squareImageUrl: 'https://your.cdn.com/images/seq3.png',
         bonus: '15',
         updateTime: '2025-09-23 00:00:45',
+        createTime: '2025-09-23 00:00:45',
         remark: '只修改第3项'
       }
     }
 
-    data.data.items = data.data.items.map((item, idx) => {
-      const mod = modifications[idx]
+    data.data.items = data.data.items.map(item => {
+      const mod = updates[item.goodsId]
       if (mod) {
         Object.assign(item, mod)
       }
