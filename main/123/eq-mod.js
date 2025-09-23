@@ -30,18 +30,22 @@ hostname = app.fmcc.com.cn
         remark: '只修改第2项'
       },
       2: {
-        //saleName: '小爱音箱',
         updateTime: '2025-09-23 00:00:45',
         createTime: '2025-09-23 00:00:45',
         remark: '只修改第3项'
       },
       3: {
-        saleName: '小爱音箱pro',
+        saleName: '小爱音箱Pro',
         updateTime: '2025-09-23 00:00:30',
         createTime: '2025-09-23 00:00:30',
         remark: '只修改第4项'
+      },
+      4: {
+        updateTime: '2025-09-23 00:00:22',
+        createTime: '2025-09-23 00:00:22',
+        remark: '只修改第3项'
       }
-      // 依此类推，想改第4条就加 3: {…}，第5条就加 4: {…}
+      //////////////
     }
 
     data.data.items = data.data.items.map((item, idx) => {
