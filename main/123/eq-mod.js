@@ -19,36 +19,30 @@ hostname = app.fmcc.com.cn
   }
 
   if (data.code === '0000' && data.data && Array.isArray(data.data.items)) {
-    // 按 goodsId 映射，只修改第一名和第三名（对应 JSON 中第 1 与第 3 条记录）
-    const updates = {
-      // 第 1 条记录 goodsId = 466685850835107706
-      '466685850835107706': {
-        saleName: '小爱音箱Pro',
-        squareImageUrl: 'https://your.cdn.com/images/seq1.png',
-        bonus: '5',
-        updateTime: '2025-09-23 00:01:03',
-        createTime: '2025-09-23 00:01:03',
-        remark: '只修改第1项'
-      },
-      // 第 3 条记录 goodsId = 525897912834747003
-      '525897912834747003': {
-        saleName: '小爱音箱Pro',
-        squareImageUrl: 'https://your.cdn.com/images/seq3.png',
-        bonus: '15',
-        updateTime: '2025-09-23 00:00:45',
-        createTime: '2025-09-23 00:00:45',
-        remark: '只修改第3项'
+    data.data.items.forEach((item, idx) => {
+      if (idx === 0) {
+        // 覆盖第 1 条记录
+        Object.assign(item, {
+          saleName: '小爱音箱Pro',
+          squareImageUrl: 'https://your.cdn.com/images/seq1.png',
+          bonus: '5',
+          updateTime: '2025-09-23 00:01:03',
+          remark: '只修改第1项'
+        })
       }
-    }
-
-    data.data.items = data.data.items.map(item => {
-      const mod = updates[item.goodsId]
-      if (mod) {
-        Object.assign(item, mod)
+      if (idx === 4) {
+        // 覆盖第 3 条记录
+        Object.assign(item, {
+          saleName: '小爱音箱Pro',
+          squareImageUrl: 'https://your.cdn.com/images/seq3.png',
+          bonus: '15',
+          updateTime: '2025-09-23 00:00:45',
+          remark: '只修改第3项'
+        })
       }
-      return item
     })
   }
 
   $done({ body: JSON.stringify(data) })
 })()
+
