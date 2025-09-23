@@ -6,43 +6,43 @@
 [mitm]
 hostname = app.fmcc.com.cn
 */
-
 ;(function() {
+  const url = $request.url;
   let body = $response.body;
   let data;
 
   try {
     data = JSON.parse(body);
   } catch (err) {
-    console.error("JSON 解析失败:", err);
+    console.error('JSON 解析失败:', err);
     return $done({});
   }
 
-  // 仅当 code=0000 且存在 items 数组时才处理
-  if (data.code === "0000" && data.data && Array.isArray(data.data.items)) {
-    // 在此定义要更新的 goodsId 与字段映射
-    const updates = {
-      "466685850835107706": {
-        saleName: "自定义 · XXXXXXX",
-        squareImageUrl: "https://your.cdn.com/images/new30.png",
-        bonus: "5",
-        createTime : "2025-09-23 00:05:32",
-        remark: "脚本已更新"
+  if (data.code === '0000' && data.data && Array.isArray(data.data.items)) {
+    // 定义按原始列表序号（0 起）要修改的项
+    // 仅修改第 1 项（index=0）和第 3 项（index=2）
+    const modifications = {
+      0: {
+        saleName: '小爱音箱Pro',
+        squareImageUrl: 'https://your.cdn.com/images/seq1.png',
+        bonus: '5',
+        updateTime : '2025-09-23 00:01:03',
+        remark: '只修改第1项'
+        "updateTime" : '2025-09-22 00:22:45',
       },
-      //"509069496554531566": {
-      //  saleName: "自定义 · XXXXXXX",
-      //  createTime : "2025-09-23 00:02:45",
-      //  squareImageUrl: "https://your.cdn.com/images/new88.png",
-       // bonus: "10",
-      //  remark: "脚本已更新"
+      2: {
+        saleName: '小爱音箱Pro',
+        squareImageUrl: 'https://your.cdn.com/images/seq3.png',
+        bonus: '15',
+        updateTime : '2025-09-23 00:00:45',
+        remark: '只修改第3项'
       }
-      // 如需修改更多 goodsId，可在此继续添加
     };
 
-    data.data.items = data.data.items.map(item => {
-      const u = updates[item.goodsId];
-      if (u) {
-        Object.assign(item, u);
+    data.data.items = data.data.items.map((item, idx) => {
+      const mod = modifications[idx];
+      if (mod) {
+        Object.assign(item, mod);
       }
       return item;
     });
@@ -50,4 +50,3 @@ hostname = app.fmcc.com.cn
 
   $done({ body: JSON.stringify(data) });
 })();
-
