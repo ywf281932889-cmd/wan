@@ -25,22 +25,25 @@ hostname = app.fmcc.com.cn
       0: {
         saleName: '小爱音箱 Pro',
         squareImageUrl: 'https://your.cdn.com/images/seq1.png',
-        bonus: '5',
+       // bonus: '5',
+        updateTime: '2025-09-23 00:01:03',
         createTime: '2025-09-23 00:01:03',
         remark: '只修改第1项'
       },
       2: {
         saleName: '小爱音箱 Pro Max',
         squareImageUrl: 'https://your.cdn.com/images/seq3.png',
-        bonus: '15',
+       // bonus: '15',
+        updateTime: '2025-09-23 00:00:45',
         createTime: '2025-09-23 00:00:45',
         remark: '只修改第3项'
       },
       4: {
         saleName: '小爱音箱 Mini',
         squareImageUrl: 'https://your.cdn.com/images/seq5.png',
-        bonus: '8',
-        updateTime: '2025-09-23 00:02:00',
+       // bonus: '8',
+        updateTime: '2025-09-23 00:00:45',
+        createTime: '2025-09-23 00:00:45',
         remark: '只修改第5项'
       }
       // 如果还要修改第7、第9……就继续按 “6: {…}” 或 “8: {…}” 添加
