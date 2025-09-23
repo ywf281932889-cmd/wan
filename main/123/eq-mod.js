@@ -35,7 +35,7 @@ hostname = app.fmcc.com.cn
         createTime: '2025-09-23 00:00:45',
         remark: '只修改第3项'
       },
-      4: {
+      3: {
         saleName: '小爱音箱pro',
         updateTime: '2025-09-23 00:00:30',
         createTime: '2025-09-23 00:00:30',
