@@ -19,7 +19,7 @@ hostname = app.fmcc.com.cn
     // 0→第1条；1→第2条；2→第3条；以此类推
     const modsByIndex = {
       0: {
-        saleName: '小爱音箱',
+        saleName: '小爱音箱Pro',
         updateTime: '2025-09-23 00:01:03',
         createTime: '2025-09-23 00:01:03',
         remark: '只修改第1项'
@@ -36,7 +36,7 @@ hostname = app.fmcc.com.cn
         remark: '只修改第3项'
       },
       4: {
-        saleName: '小爱音箱',
+        saleName: '小爱音箱pro',
         updateTime: '2025-09-23 00:00:30',
         createTime: '2025-09-23 00:00:47',
         remark: '只修改第4项'
