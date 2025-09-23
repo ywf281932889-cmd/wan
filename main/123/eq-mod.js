@@ -30,6 +30,11 @@ hostname = app.fmcc.com.cn
         createTime: '2025-09-23 00:01:03',
         remark: '只修改第1项'
       },
+      1: {
+        updateTime: '2025-09-23 00:00:47',
+        createTime: '2025-09-23 00:00:47',
+        remark: '只修改第3项'
+      },
       2: {
         saleName: '小爱音箱 Pro Max',
         squareImageUrl: 'https://your.cdn.com/images/seq3.png',
