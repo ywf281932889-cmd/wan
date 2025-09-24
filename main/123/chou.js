@@ -17,7 +17,7 @@ hostname = app.fmcc.com.cn
   if (data?.code === '0000' && Array.isArray(data.data)) {
     const item = data.data[0]
     if (item) {
-      item.dicePoint = ["1", "2", "3", "4", "5", "6"]
+      item.dicePoint = ["5", "6", "3", "4", "1", "2"]
       item.dicePointDesc = "对堂"
       item.diceAward = 3
       item.saleName = "小爱音箱pro"
