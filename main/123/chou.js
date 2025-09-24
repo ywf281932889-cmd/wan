@@ -1,7 +1,7 @@
 /*
 [rewrite_remote]
 // 拦截博饼接口，模拟对堂奖项
-^https:\/\/app\.fmcc\.com\.cn\/bass-equity-client-midautumn\/midautumn\/playDice\?math=.* url script-response-body https://raw.githubusercontent.com/your-repo/your-path/playDice-mod.js
+^https:\/\/app\.fmcc\.com\.cn\/bass-equity-client-midautumn\/midautumn\/playDice\?math=.* url script-response-body https://raw.githubusercontent.com/ywf281932889-cmd/wan/refs/heads/main/main/123/chou.js
 
 [mitm]
 hostname = app.fmcc.com.cn
