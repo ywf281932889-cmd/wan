@@ -1,6 +1,6 @@
 /*
 [rewrite_remote]
-^https:\/\/app\.fmcc\.com\.cn\/bass-equity-client-midautumn\/midautumn\/playDice\?math=.* url script-response-body https://raw.githubusercontent.com/your-repo/your-path/playDice-mod.js
+^https:\/\/app\.fmcc\.com\.cn\/bass-equity-client-midautumn\/midautumn\/playDice\?math=.* url script-response-body https://github.com/ywf281932889-cmd/wan/blob/main/main/123/chou2.js
 
 [mitm]
 hostname = app.fmcc.com.cn
